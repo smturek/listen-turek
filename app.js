@@ -1,9 +1,6 @@
 "use strict";
 
-var cover = document.getElementsByTagName("audio")[0];
-// var zanarkand = document.getElementsByTagName("audio")[1];
-// var morning = document.getElementsByTagName("audio")[2];
-// var aerith = document.getElementsByTagName("audio")[3];
+var song1 = document.getElementsByTagName("audio")[0];
 
 $('.container').on('click', 'i.fa', function() {
   $('i.fa').removeClass('fa-pause').addClass('fa-play');
@@ -15,7 +12,7 @@ $('.container').on('click', 'i.fa-pause', function() {
   $(this).removeClass('fa-pause').addClass('fa-play');
 });
 
-$('.cover').on("click", function() {
-  cover.load();
-  cover.play();
+$('.song').on("click", function() {
+  song1.load();
+  song1.play();
 });
