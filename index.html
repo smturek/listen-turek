@@ -9,38 +9,33 @@
 
   <body>
 
-    <audio src="/music/i-need-your-hours.mp3"></audio>
-    <audio src="/music/my-friends-never-die.mp3"></audio>
-    <audio src="/music/timestretch.mp3"></audio>
-    <audio src="/music/touka.mp3"></audio>
-
     <div class="title">
       <h1>Welcome to Listen</h1>
     </div>
 
     <div class="container">
-      <script type="text/template" data-template="tracks">
-        {{#tracks}}
-        <div class="{{file}}">
-          <i class="fa fa-play"> {{title}} - {{artist}}</i>
-        </div>
-        {{/tracks}}
-      </script>
+      <!-- data-template "tracks" -->
+      Loading
     </div>
 
-    <div class="hours">
-      <i class="fa fa-play"> {{title}} - {{artist}}</i>
-    </div>
-    <div class="time">
-      <i class="fa fa-play"> {{title}} - {{artist}}</i>
-    </div>
+    <script type="text/template" data-template="tracks">
+      {{#tracks}}
+      <div>
+        <i class="fa fa-play" data-track="{{id}}"> {{title}} - {{artist}}</i>
+        <audio id="{{id}}" src="/music/{{file}}.mp3"></audio>
+      </div>
+      {{/tracks}}
+    </script>
+
+
+    <footer>
+      <script src="bower_components/jquery/dist/jquery.js"></script>
+      <script src="bower_components/mustache/mustache.js"></script>
+      <script src="/app.js"></script>
+    </footer>
 
   </body>
 
-  <footer>
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/mustache/mustache.js"></script>
-    <script src="/app.js"></script>
-  </footer>
+
 
 </html>
