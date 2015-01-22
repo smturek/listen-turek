@@ -36,4 +36,6 @@ $('.container').on('click', 'i.fa-stop', function() {
     this.pause();
   });
 
+  $('.runner').text("Select a Song!")
+
 });
