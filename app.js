@@ -14,7 +14,11 @@ $('.container').on('click', 'i.fa', function() {
   $('i.fa').removeClass('fa-stop').addClass('fa-play');
   $(this).removeClass('fa-play').addClass('fa-stop');
 
-  var id = $(this).data("track");
+  var track = $(this).data("track");
+
+  $('.runner').text("Now Playing: " + track)
+
+  var id = $(this).data("id");
   var audioTag = document.getElementById(id);
 
   $('audio').each(function() {

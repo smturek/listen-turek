@@ -10,7 +10,7 @@
   <body>
 
     <div class="title">
-      <h1>Welcome to Listen</h1>
+      <h1 class="runner">Welcome to Listen</h1>
     </div>
 
     <div class="container">
@@ -21,7 +21,9 @@
     <script type="text/template" data-template="tracks">
       {{#tracks}}
       <div>
-        <i class="fa fa-play" data-track="{{id}}"> {{title}} - {{artist}}</i>
+        <i class="fa fa-play" data-id="{{id}}"  data-track="{{title}} - {{artist}}">
+           {{title}} - {{artist}}
+        </i>
         <audio id="{{id}}" src="/music/{{file}}.mp3"></audio>
       </div>
       {{/tracks}}
